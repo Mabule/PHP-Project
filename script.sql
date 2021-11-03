@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS `projet` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+use `projet`;
+
+CREATE TABLE IF NOT EXISTS `users` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `advertise` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `chat` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `pictures` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `house` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `energy` (
+    UTI_NP varchar(255) NOT NULL,
+    UTI_MAIL varchar(255) NOT NULL,
+    UTI_TEL varchar(20) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

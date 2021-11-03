@@ -3,4 +3,14 @@ div{
     top: 50%;
     left: 50%;
     font-size: 200%;
+    animation: anim 1s linear infinite;
+}
+
+@keyframes anim{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
 }

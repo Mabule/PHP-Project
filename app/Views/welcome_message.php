@@ -1,2 +1,2 @@
 <?php
-include 'html/index.html';
+include 'html/accueil.html';

@@ -35,8 +35,10 @@
 		<label>Vérification	mot de passe :<br>
 			<input type="password" placeholder="mot_de-passe" required>
 		</label>
-		
-		<input type="submit" value="S'inscrire">
+		<div class="row">
+			<input type="submit" value="S'inscrire" class="bottom_handler">
+			<a href="C_sign_up" class="bottom_handler">Se connecter</a>
+		</div>
 	</form>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
   	<script src="js/app.js"></script>

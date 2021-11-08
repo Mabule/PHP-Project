@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="css/common.css">
 <?php
 $html = "<header class=\"row flex_center\">
             <img src=\"img/logo.png\">

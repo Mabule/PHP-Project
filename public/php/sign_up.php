@@ -11,7 +11,7 @@
 </head>
 <body class="column column_center">
 	<h1>Connexion</h1>
-	<form action="C_sign_up/verif_form" method="POST" class="column">
+	<form action="Form" method="POST" class="column">
 		
 		<label>Pseudo :<br>
 			<input type="text" placeholder="Pseudo" required>

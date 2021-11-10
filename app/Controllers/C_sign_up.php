@@ -8,8 +8,4 @@ class C_sign_up extends BaseController
     {
         return view('c_sign_up');
     }
-
-    public function verif_form(){
-        
-    }
 }

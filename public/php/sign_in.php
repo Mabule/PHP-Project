@@ -11,32 +11,32 @@
 </head>
 <body class="column column_center">
 	<h1>Inscription</h1>
-	<form action="C_sign_in/verif_form" method="POST" class="column">
+	<form action="Form" method="POST" class="column">
 		<label>Nom :<br>
-			<input type="text" placeholder="Nom" required>
+			<input type="text" placeholder="Nom" required name="nom">
 		</label>
 		
 		<label>Prénom :<br>
-			<input type="text" placeholder="Prénom" required>
+			<input type="text" placeholder="Prénom" required name="prenom">
 		</label>
 		
 		<label>Pseudo :<br>
-			<input type="text" placeholder="Pseudo" required>
+			<input type="text" placeholder="Pseudo" required name="login">
 		</label>
 		
 		<label>Email : <br>
-			<input type="mail" placeholder="addresse.email@gmail.com" required>
+			<input type="email" placeholder="addresse.email@gmail.com" required name="email">
 		</label>
 		
 		<label>Mot de passe : <br>
-			<input type="password" placeholder="mot_de-passe" required>
+			<input type="password" placeholder="mot_de-passe" required name="mdp">
 		</label>
 		
 		<label>Vérification	mot de passe :<br>
-			<input type="password" placeholder="mot_de-passe" required>
+			<input type="password" placeholder="mot_de-passe" required name="mdp_confirm">
 		</label>
 		<div class="row">
-			<input type="submit" value="S'inscrire" class="bottom_handler">
+			<input type="submit" value="S'inscrire" class="bottom_handler" name="send">
 			<a href="C_sign_up" class="bottom_handler">Se connecter</a>
 		</div>
 	</form>

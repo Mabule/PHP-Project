@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_POST['login'])){
-    include 'html/sign_in.php';
+if(!isset($_POST['login'])){
+    return view('c_sign_in');
 }else{
-    include 'html/header.php';
-    include 'html/index.php';
+    include 'php/header.php';
+    include 'php/index.php';
 }

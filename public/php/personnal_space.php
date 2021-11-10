@@ -14,7 +14,8 @@
 			<ul>
 				<li>
 					<a href="">Créer une annonce</a>
-					<a href="">Créer une annonce</a>
+					<a href="">Modifier son profil</a>
+                    <a href="">Modifier une annonce</a>
 				</li>
 			</ul>
 		</nav>

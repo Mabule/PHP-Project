@@ -1,2 +1,2 @@
 <?php
-include 'html/sign_up.php';
+include 'php/sign_up.php';

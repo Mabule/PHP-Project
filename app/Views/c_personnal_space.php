@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['login'])){
-    include 'html/sign_in.php';
+    return view('c_sign_in');
 }else{
-    include 'html/header.php';
-    include 'html/personnal_space.php';
+    include 'php/header.php';
+    include 'php/personnal_space.php';
 }

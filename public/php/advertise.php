@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/advertise.css">
+	<meta name="author" content="Mabule">ype="text/css" href="css/common.css">
+	<link rel="stylesheet" type="te
+	<link rel="stylesheet" txt/css" href="css/advertise.css">
 	<title>Coucou</title>
 </head>
 <body>

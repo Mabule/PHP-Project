@@ -1,0 +1,48 @@
+a
+{
+    text-decoration: none;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:valid
+{
+    color: red;
+}
+
+#Choice{
+    overflow: fixed;
+    float: left;
+    margin-top: 300px;
+    margin-left: 20%;
+}
+
+div{
+    padding: 10px;
+}
+
+tr
+{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.anchre
+{
+    float: right;
+    margin-top: 50px;
+    margin-right: 30%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 30%;
+}
+
+#info_connexion
+{
+    margin-top: 200px;
+}

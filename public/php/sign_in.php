@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,6 +41,6 @@
 		</div>
 	</form>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-  	<script src="js/app.js"></script>
+  	<script src="../js/app.js"></script>
 </body>
 </html>

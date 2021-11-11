@@ -1,5 +1,4 @@
 <?php
-//include 'php/sign_in.php';
 helper('html');
 helper('form');
 echo doctype();
@@ -7,26 +6,9 @@ echo "<html>";
 echo "<head>";
 echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 echo "<meta name=\"author\" content=\"PASCHÉHTOI\">";
-$t = [
-    'href' => "common.css",
-    'indexPage' => false
-];
-echo basename (__FILE__, '.php');
-$scandir = scandir("css");
-foreach($scandir as $fichier){
-    echo "$fichier<br/>";
-}
-echo link_tag($t);
-$t = [
-    'href' => "css/form.css",
-    'indexPage' => true
-];
-echo link_tag($t);
-$t = [
-    'href' => "css/sign_in.css",
-    'indexPage' => true
-];
-echo link_tag($t);
+echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/common.css\">";
+echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/form.css\">";
+echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/sign_in.css\">";
 echo "<title>Coucou</title>";
 echo "</head>";
 echo "<body class=\"column column_center\">";

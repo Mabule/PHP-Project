@@ -15,7 +15,6 @@ a:valid
 }
 
 #Choice{
-    overflow: fixed;
     float: left;
     margin-top: 300px;
     margin-left: 20%;
@@ -38,6 +37,7 @@ tr
     border: 1px solid black;
     border-collapse: collapse;
     width: 30%;
+    background-image: url("../img/FondGrisFoncé.png");
 }
 
 #info_connexion
@@ -47,6 +47,44 @@ tr
 
 #changement
 {
-    margin-right: 30%;
+    margin-right: 25%;
     float: right;
+}
+
+body{
+    background-image: url("../img/FondChangement.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.gauche
+{
+    margin-top: 50px;
+    margin-right: 35%;
+    background-image: url("../img/FondGrisClair.png");
+}
+
+.info_connexion
+{
+    width: 500px;
+    height: 500px;
+}
+
+.info_public
+{
+    width: 500px;
+    height: 500px;
+}
+
+.info_perso
+{
+    width: 500px;
+    height: 500px;
+}
+
+.supprimer
+{
+    width: 500px;
+    height: 500px;
 }

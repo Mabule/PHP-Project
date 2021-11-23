@@ -1,6 +1,7 @@
 a
 {
     text-decoration: none;
+    color: black;
 }
 
 a:visited
@@ -15,8 +16,8 @@ a:valid
 }
 
 #Choice{
-    float: left;
-    margin-top: 300px;
+    position: fixed;
+    margin-top: 400px;
     margin-left: 20%;
 }
 
@@ -36,8 +37,7 @@ tr
     margin-top: 50px;
     border: 1px solid black;
     border-collapse: collapse;
-    width: 30%;
-    background-image: url("../img/FondGrisFoncé.png");
+    width: 40%;
 }
 
 #info_connexion
@@ -47,8 +47,9 @@ tr
 
 #changement
 {
-    margin-right: 25%;
-    float: right;
+    margin-left: 45%;
+    width: 500px;
+    height: 250px;
 }
 
 body{
@@ -58,33 +59,49 @@ body{
     background-size: cover;
 }
 
-.gauche
+.ancre_gauche
 {
     margin-top: 50px;
     margin-right: 35%;
     background-image: url("../img/FondGrisClair.png");
 }
 
-.info_connexion
+.ancre_droite
 {
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-right: 35%;
+    background-image: url("../img/FondGrisFoncé.png");
+}
+
+#connexion
+{
+    display: flex;
+    border: 1px solid black;
     width: 500px;
     height: 500px;
 }
 
-.info_public
+#info_public
 {
+    display: flex;
+    border: 1px solid black;
     width: 500px;
     height: 500px;
 }
 
-.info_perso
+#info_perso
 {
+    display: flex;
+    border: 1px solid black;
     width: 500px;
     height: 500px;
 }
 
-.supprimer
+#supprimer
 {
+    display: flex;
+    border: 1px solid black;
     width: 500px;
     height: 500px;
 }

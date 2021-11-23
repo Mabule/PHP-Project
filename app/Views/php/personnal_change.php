@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="author" content="Léo">
-        <link rel="stylesheet" type="text/css" href="css/personnal_change.css">
+        <link rel="stylesheet" type="text/css" href="../css/personnal_change.css">
 	    <title>Coucou</title>
     </head>
 
@@ -21,36 +21,29 @@
         
         <div id="changement">
             <div id="connexion" class="groupe">
-                <div class="anchre_gauche" id="info_connexion_gauche">
+                <div class="ancre_gauche" id="info_connexion_gauche">
                     connexions
                 </div>
-                <div class="anchre_droite" id="info_connexion_droite">
+                <div class="ancre_droite" id="info_connexion_droite">
                     Ici les infos de connexions
                 </div>
             </div>
 
             <div id="info_public" class="groupe">
-                <div class="anchre_gauche" id="info_public_gauche">
+                <div class="ancre_gauche" id="info_public_gauche">
                     info publiques
                 </div>
-                <div class="anchre_droite" id="info_public_droite">
+                <div class="ancre_droite" id="info_public_droite">
                     Ici les infos publiques
                 </div>
             </div>
 
             <div id="info_perso" class="groupe">
-                <div class="anchre_gauche" id="info_perso_gauche">
+                <div class="ancre_gauche" id="info_perso_gauche">
                     info persos
                 </div>
-                <div class="anchre_droite" id="info_perso_droite">
+                <div class="ancre_droite" id="info_perso_droite">
                     Ici les infos perso
-                    <?php
-                        global $get_user;
-                        echo "Login : " . $_SESSION["login"] . "<br>";
-                        echo "Mail : " . $get_user["UTI_MAIL"] . "<br>";
-                        echo "Téléphone : " . $get_user["UTI_TEL"] . "<br>";
-                        echo "Login : " . $get_user["UTI_LOGIN"] . "<br>";
-                    ?>
                 </div>
             </div>
 
@@ -65,10 +58,10 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             
             <div id="supprimer" class="groupe">
-                <div class="anchre_gauche" id="supprimer_gauche">
+                <div class="ancre_gauche" id="supprimer_gauche">
                     supprimer
                 </div>
-                <div class="anchre_droite" id="supprimer_droite">
+                <div class="ancre_droite" id="supprimer_droite">
                     ici pour supprimer le compte
                 </div>
             </div>

@@ -12,7 +12,7 @@
         <div id="Choice">
             <title>Sommaire</title>
             <ul>
-                <li><a href="#info_connexion" class="lien">Informations de connexion</a></li>
+                <li><a href="#connexion" class="lien">Informations de connexion</a></li>
                 <li><a href="#info_public" class="lien">Informations publiques</a></li>
                 <li><a href="#info_perso" class="lien">Informations personnels</a></li>
                 <li><a href="#supprimer" class="lien">Supprimer le compte</a></li>

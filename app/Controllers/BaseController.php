@@ -49,4 +49,10 @@ class BaseController extends Controller
         $db = \Config\Database::connect();
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    public function start(){
+        if(!isset($_SESSION)){
+            session_start();
+        }
+    }
 }

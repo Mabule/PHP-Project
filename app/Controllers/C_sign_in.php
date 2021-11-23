@@ -6,6 +6,7 @@ class C_sign_in extends BaseController
 {
     public function index()
     {
-        return view('c_sign_in');
+        $this->start();
+        echo view('c_sign_in');
     }
 }

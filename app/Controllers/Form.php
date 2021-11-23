@@ -2,19 +2,24 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
-
-class Form extends Controller
+class Form extends BaseController
 {
     public function index()
     {
+        $this->start();
+        var_dump($_SESSION);
         $db = db_connect();
         //$q = $db->query('YOUR QUERY HERE');
         helper(['form', 'url']);
-        $str = explode('/', $_SERVER['HTTP_REFERER'])[5];
-        $array =  \Config\Services::validation();
-        if($str == "C_sign_up"){
-            $array->setRules([
+        var_dump($_SESSION['source']);
+        if(isset($_SESSION['source'])){
+            $str = $_SESSION['source'];
+            var_dump($str);
+        }else{
+            return view('c_sign_in');
+        }
+        if($str == "sign_up"){
+            $rules = [
                 'login' => [
                     'rules' => 'required|min_length[2]',
                     'errors' => [
@@ -27,9 +32,9 @@ class Form extends Controller
                         'required' => 'Veuillez renseigner un mot de passe valide (5 caractères minimum)',
                     ]
                 ]
-            ]);
-        }else if($str == "C_sign_in"){
-            $array->setRules([
+            ];
+        }else if($str == "sign_in"){
+            $rules = [
                 'nom' => [
                     'rules' => 'required|min_length[2]',
                     'errors' => [
@@ -66,9 +71,9 @@ class Form extends Controller
                         'required' => 'Les mots de passe doivent être similaire',
                     ]
                 ]
-            ]);
+            ];
         }
-        if ($this->validate($array->getRules())) {
+        if ($this->validate($rules)) {
             $builder = $db->table('users');
             if($str == "C_sign_up"){
                 $tab = [
@@ -89,10 +94,11 @@ class Form extends Controller
             }
             $query = $builder->get();
             var_dump($query);
-            echo view('c_index', ['validation' => $this->validator,]);
+            echo view('c_index');
         } else {
             //echo view($str);
-            $array->showError();
+            print_r($this->validator);
+            //$rules->showError();
         }
     }
 }

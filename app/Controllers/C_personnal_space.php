@@ -6,10 +6,11 @@ class C_personnal_space extends BaseController
 {
     public function index()
     {
+        $this->start();
         if(!isset($_POST['login'])){
-            return view('c_sign_in');
+            echo view('c_sign_in');
         }else{
-            return view('c_personnal_space');
+            echo view('c_personnal_space');
         }
     }
 }

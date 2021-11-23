@@ -6,10 +6,11 @@ class C_advertise extends BaseController
 {
     public function index()
     {
+        $this->start();
         if(!isset($_POST['login'])){
-            return view('c_sign_in');
+            echo view('c_sign_in');
         }else{
-            return view('c_advertise');
+            echo view('c_advertise');
         }
     }
 }

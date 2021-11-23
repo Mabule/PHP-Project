@@ -28,12 +28,10 @@ input, a{
 
 .bottom_handler{
     width: 47.5%;
-    background-color: red;
 }
 
 .bottom_handler:nth-child(2){
     background-color: #fff;
-    background-color: red;
     margin-left: 5%;
     text-align: center;
     line-height: var(--height);

@@ -41,6 +41,6 @@
 		</div>
 	</form>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-  	<script src="../js/app.js"></script>
+  	<script src="js/app.js"></script>
 </body>
 </html>

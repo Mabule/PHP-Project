@@ -6,7 +6,6 @@
 	<meta name="author" content="Mabule">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="icon" href="../img/patoi.png">
 	<title>Coucou</title>
 </head>
 
@@ -38,6 +37,6 @@
 		</div>
 	</section>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-	<script src="../js/app.js"></script>
+	<script src="../../../public/js/app.js"></script>
 </body>
 </html>

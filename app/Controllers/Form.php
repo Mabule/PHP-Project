@@ -89,7 +89,7 @@ class Form extends Controller
             }
             $query = $builder->get();
             var_dump($query);
-            //echo view('c_index', ['validation' => $this->validator,]);
+            echo view('c_index', ['validation' => $this->validator,]);
         } else {
             //echo view($str);
             $array->showError();

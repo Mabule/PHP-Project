@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="author" content="Léo">
-        <link rel="stylesheet" type="text/css" href="../css/personnal_change.css">
+        <link rel="stylesheet" type="text/css" href="css/personnal_change.css">
 	    <title>Coucou</title>
     </head>
 

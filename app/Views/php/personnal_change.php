@@ -20,20 +20,40 @@
         </div>
         
         <div id="changement">
-            <div class="anchre" id="info_connexion">
+            <div id="connexion" class="groupe">
+                <div class="anchre_gauche" id="info_connexion_gauche">
+                    connexions
+                </div>
+                <div class="anchre_droite" id="info_connexion_droite">
                     Ici les infos de connexions
+                </div>
             </div>
 
-            <div class="anchre" id="info_public">
-                <p>
+            <div id="info_public" class="groupe">
+                <div class="anchre_gauche" id="info_public_gauche">
+                    info publiques
+                </div>
+                <div class="anchre_droite" id="info_public_droite">
                     Ici les infos publiques
-                </p>
+                </div>
             </div>
 
-
-            <div class="anchre" id="info_perso">
-                    Ici les infos persos
+            <div id="info_perso" class="groupe">
+                <div class="anchre_gauche" id="info_perso_gauche">
+                    info persos
+                </div>
+                <div class="anchre_droite" id="info_perso_droite">
+                    Ici les infos perso
+                    <?php
+                        global $get_user;
+                        echo "Login : " . $_SESSION["login"] . "<br>";
+                        echo "Mail : " . $get_user["UTI_MAIL"] . "<br>";
+                        echo "Téléphone : " . $get_user["UTI_TEL"] . "<br>";
+                        echo "Login : " . $get_user["UTI_LOGIN"] . "<br>";
+                    ?>
+                </div>
             </div>
+
 
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -44,12 +64,15 @@
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             
-
-            <div class="anchre" id="supprimer">
-                <p>
+            <div id="supprimer" class="groupe">
+                <div class="anchre_gauche" id="supprimer_gauche">
+                    supprimer
+                </div>
+                <div class="anchre_droite" id="supprimer_droite">
                     ici pour supprimer le compte
-                </p>
+                </div>
             </div>
+
         </div>
     </body>
 </html>

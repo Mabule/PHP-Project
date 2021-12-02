@@ -12,13 +12,30 @@
 <body class="column column_center">
 	<h1>Connexion</h1>
 	<form action="Form" method="POST" class="column">
-		
+		<p class="error">
+			<?php
+				if(isset($_SESSION['non-existant_account']) && $_SESSION['non-existant_account'] != "")
+					echo $_SESSION['non-existant_account']; 
+			?>
+		</p>
 		<label>Pseudo :<br>
-			<input type="text" placeholder="Pseudo" required>
+			<input type="text" placeholder="Pseudo" required name="login">
+			<p class="error">
+			<?php 
+				if(isset($_SESSION['login']) && $_SESSION['login'] != "")
+					echo $_SESSION['login']; 
+			?>
+			</p>
 		</label>
 		
 		<label>Mot de passe : <br>
-			<input type="password" placeholder="mot_de-passe" required>
+			<input type="password" placeholder="mot_de-passe" required name="mdp">
+			<p class="error">
+			<?php 
+				if(isset($_SESSION['mdp']) && $_SESSION['mdp'] != "")
+					echo $_SESSION['mdp']; 
+				?>
+			</p>
 		</label>
 
 		<div class="row">

@@ -36,3 +36,9 @@ input, a{
     text-align: center;
     line-height: var(--height);
 }
+
+.error{
+    color: #f00;
+    font-style: italic;
+    margin-top: -10px;
+}

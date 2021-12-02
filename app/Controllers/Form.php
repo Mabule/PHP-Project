@@ -2,19 +2,17 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Database\Database;
+
 class Form extends BaseController
 {
     public function index()
     {
         $this->start();
-        var_dump($_SESSION);
-        $db = db_connect();
-        //$q = $db->query('YOUR QUERY HERE');
+        model(Database::class);
         helper(['form', 'url']);
-        var_dump($_SESSION['source']);
         if(isset($_SESSION['source'])){
             $str = $_SESSION['source'];
-            var_dump($str);
         }else{
             return view('c_sign_in');
         }
@@ -73,32 +71,58 @@ class Form extends BaseController
                 ]
             ];
         }
+        foreach($rules as $key => $val)
+            if(isset($_SESSION[$key]))
+                $_SESSION[$key] = "";
+        $_SESSION['non-existant_account'] = "";
+        $_SESSION['already_exist'] = "";
         if ($this->validate($rules)) {
-            $builder = $db->table('users');
-            if($str == "C_sign_up"){
+            var_dump($this->db);
+            /*$builder = $this->$db->table('users');
+            
+            if($str == "sign_up"){
                 $tab = [
-                    'login' => $_POST['login'],
-                    'password' => $_POST['mdp']
+                    'u_pseudo' => $_POST['login'],
+                    'u_mdp' => $_POST['mdp']
                 ];
-                $builder->where('u_pseudo', $tab['login']);
-                $builder->where('u_mdp', $tab['password']);
+                $builder->where('u_pseudo', $tab['u_pseudo']);
+                $builder->where('u_mdp', $tab['u_mdp']);
             }else{
                 $tab = [
-                    'nom' => $_POST['nom'],
-                    'prenom' => $_POST['prenom'],
-                    'login' => $_POST['login'],
-                    'email' => $_POST['email'],
-                    'password' => $_POST['mdp']
+                    'u_nom' => $_POST['nom'],
+                    'u_prenom' => $_POST['prenom'],
+                    'u_pseudo' => $_POST['login'],
+                    'u_email' => $_POST['email'],
+                    'u_password' => $_POST['mdp'],
+                    'u_admin' => 0
                 ];
-                $builder->where('u_email', $tab['email']);
+                $builder->where('u_email', $tab['u_email']);
             }
             $query = $builder->get();
-            var_dump($query);
-            echo view('c_index');
+            if($str == "sign_up"){
+                if(count($query->getResultArray()) == 1)
+                    echo view('c_index');
+                else{
+                    $_SESSION['non-existant_account'] = "Veuillez d'abord vous créer un compte";
+                    echo view('c_sign_up');
+                }
+            }else{
+                if(count($query->getResultArray()) == 0){
+                    $this->$db->insert('users', $tab);
+                    echo view('c_index');
+                }else{
+                    $_SESSION['already_exist'] = "Un comtpe avec cet email existe déjà !";
+                    echo view('c_sign_in');
+                }
+            }*/
         } else {
-            //echo view($str);
-            print_r($this->validator);
-            //$rules->showError();
+            foreach($rules as $key => $val){
+                if(isset($this->validator->getErrors()[$key])){
+				    $_SESSION[$key] = $rules[$key]['errors']['required']; 
+                    var_dump($rules[$key]['errors']['required']);
+                }
+            }
+            echo view("c_".$str);
         }
     }
 }

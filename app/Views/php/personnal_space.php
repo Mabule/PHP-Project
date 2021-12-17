@@ -14,7 +14,7 @@
 			<ul>
 				<li>
 					<a href="">Créer une annonce</a>
-					<a href="C_personnal_change">Modifier son profil</a>
+					<a href="personnal_change.php">Modifier son profil</a>
                     <a href="">Modifier une annonce</a>
 				</li>
 			</ul>

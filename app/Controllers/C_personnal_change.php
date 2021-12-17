@@ -7,10 +7,10 @@ class C_personnal_change extends BaseController
     public function index()
     {
         $this->start();
-        if(!isset($_POST['login'])){
-            echo view('c_sign_in');
+        if(!isset($_SESSION['connect'])){
+            echo view('c_sign_up');
         }else{
-            echo view('php/personnal_change.php');
+            echo view('c_personnal_change');
         }
     }
 }

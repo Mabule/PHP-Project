@@ -3,7 +3,7 @@
 $html = "<header class=\"row flex_center\">
             <img src=\"img/logo.png\">
             <nav class=\"row column_center\">
-                <ul class=\"row\">
+                <ul class=\"row column_center\">
                     <li>
                         <a href=\"Home\">Accueil</a>
                     </li>
@@ -12,14 +12,17 @@ $html = "<header class=\"row flex_center\">
                     </li>
                     <li>
                         <a href=\"";
-if(isset($_SESSION['login'])){
-    $html .= "C_sign_in\">Se connecter";
+if(!isset($_SESSION['connect'])){
+    $html .= "C_sign_up\">Se connecter</a>
+            </li>";
 }else{
-    $html .= "C_personnal_space\">Mon espace";
+    $html .= "C_personnal_space\">Mon espace</a>
+            </li>
+            <li>
+                <a href=\"C_disconnect\">Se déconnecter</a>
+            </li>";
 }
-$html .= "      </a>
-            </li>   
-        </ul>
+$html .= "</ul>
     </nav>
 </header>";
 echo $html;

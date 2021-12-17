@@ -100,15 +100,25 @@ class Form extends BaseController
             }
             $query = $builder->get();
             if($str == "sign_up"){
-                if(count($query->getResultArray()) == 1)
+                if(count($query->getResultArray()) == 1) {
+                    $_SESSION['connect'] = True;
                     echo view('c_index');
-                else{
-                    $_SESSION['non-existant_account'] = "Veuillez d'abord vous créer un compte";
-                    echo view('c_sign_up');
+                }else{
+                    $builder = $db->table('users');
+                    $builder->where('u_pseudo', $tab['u_pseudo']);
+                    $query = $builder->get();
+                    if(count($query->getResultArray()) == 1){
+                        $_SESSION['non-existant_account'] = "Mauvais mot de passe";
+                        echo view('c_sign_up');
+                    }else{
+                        $_SESSION['already_exist'] = "Veuillez d'abord vous créer un compte";
+                        echo view('c_sign_in');
+                    }
                 }
             }else{
                 if(count($query->getResultArray()) == 0){
                     $builder->insert($tab);
+                    $_SESSION['connect'] = True;
                     echo view('c_index');
                 }else{
                     $_SESSION['already_exist'] = "Un comtpe avec cet email existe déjà !";
@@ -118,7 +128,7 @@ class Form extends BaseController
         } else {
             foreach($rules as $key => $val){
                 if(isset($this->validator->getErrors()[$key])){
-				    $_SESSION[$key] = $rules[$key]['errors']['required'];
+				    $_SESSION[$key] = $val['errors']['required'];
                 }
             }
             echo view("c_".$str);

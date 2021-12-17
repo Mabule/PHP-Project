@@ -6,7 +6,12 @@ class Home extends BaseController
 {
     public function index()
     {
+
         $this->start();
-        echo view('c_index');
+        if(!isset($_POST['login'])){
+            echo view('c_sign_in');
+        }else{
+            echo view('c_index');
+        }
     }
 }

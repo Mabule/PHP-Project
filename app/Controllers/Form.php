@@ -77,8 +77,8 @@ class Form extends BaseController
         $_SESSION['non-existant_account'] = "";
         $_SESSION['already_exist'] = "";
         if ($this->validate($rules)) {
-            var_dump($this->db);
-            /*$builder = $this->$db->table('users');
+            $db = db_connect();
+            $builder = $db->table('users');
             
             if($str == "sign_up"){
                 $tab = [
@@ -93,7 +93,7 @@ class Form extends BaseController
                     'u_prenom' => $_POST['prenom'],
                     'u_pseudo' => $_POST['login'],
                     'u_email' => $_POST['email'],
-                    'u_password' => $_POST['mdp'],
+                    'u_mdp' => $_POST['mdp'],
                     'u_admin' => 0
                 ];
                 $builder->where('u_email', $tab['u_email']);
@@ -108,18 +108,17 @@ class Form extends BaseController
                 }
             }else{
                 if(count($query->getResultArray()) == 0){
-                    $this->$db->insert('users', $tab);
+                    $builder->insert($tab);
                     echo view('c_index');
                 }else{
                     $_SESSION['already_exist'] = "Un comtpe avec cet email existe déjà !";
                     echo view('c_sign_in');
                 }
-            }*/
+            }
         } else {
             foreach($rules as $key => $val){
                 if(isset($this->validator->getErrors()[$key])){
-				    $_SESSION[$key] = $rules[$key]['errors']['required']; 
-                    var_dump($rules[$key]['errors']['required']);
+				    $_SESSION[$key] = $rules[$key]['errors']['required'];
                 }
             }
             echo view("c_".$str);

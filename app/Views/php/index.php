@@ -12,6 +12,10 @@
 <body>
 	<section class="presentation">
 		<div class="pannel">
+            <?php
+                $nb_row = ceil(count($_SESSION['annonce'])/3);
+                var_dump($nb_row);
+            ?>
 			<div class="grid_row">
 				<div class="advertise grid_one">
 					test1

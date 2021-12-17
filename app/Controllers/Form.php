@@ -9,8 +9,6 @@ class Form extends BaseController
     public function index()
     {
         $this->start();
-        model(Database::class);
-        helper(['form', 'url']);
         if(isset($_SESSION['source'])){
             $str = $_SESSION['source'];
         }else{
@@ -79,7 +77,6 @@ class Form extends BaseController
         if ($this->validate($rules)) {
             $db = db_connect();
             $builder = $db->table('users');
-            
             if($str == "sign_up"){
                 $tab = [
                     'u_pseudo' => $_POST['login'],
@@ -102,27 +99,27 @@ class Form extends BaseController
             if($str == "sign_up"){
                 if(count($query->getResultArray()) == 1) {
                     $_SESSION['connect'] = True;
-                    echo view('c_index');
+                    (new Home)->index();
                 }else{
                     $builder = $db->table('users');
                     $builder->where('u_pseudo', $tab['u_pseudo']);
                     $query = $builder->get();
                     if(count($query->getResultArray()) == 1){
                         $_SESSION['non-existant_account'] = "Mauvais mot de passe";
-                        echo view('c_sign_up');
+                        (new C_sign_up())->index();
                     }else{
                         $_SESSION['already_exist'] = "Veuillez d'abord vous créer un compte";
-                        echo view('c_sign_in');
+                        (new C_sign_in())->index();
                     }
                 }
             }else{
                 if(count($query->getResultArray()) == 0){
                     $builder->insert($tab);
                     $_SESSION['connect'] = True;
-                    echo view('c_index');
+                    (new Home())->index();
                 }else{
                     $_SESSION['already_exist'] = "Un comtpe avec cet email existe déjà !";
-                    echo view('c_sign_in');
+                    (new C_sign_in())->index();
                 }
             }
         } else {

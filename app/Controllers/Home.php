@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         $this->start();
         if(!isset($_SESSION['connect'])){
-            echo view('c_sign_up');
+            (new C_sign_up())->index();
         }else{
             $db = db_connect();
             $builder = $db->table('advertise');

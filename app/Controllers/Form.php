@@ -2,8 +2,6 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Database\Database;
-
 class Form extends BaseController
 {
     public function index()
@@ -12,7 +10,7 @@ class Form extends BaseController
         if(isset($_SESSION['source'])){
             $str = $_SESSION['source'];
         }else{
-            return view('c_sign_in');
+            return view('c_sign_up');
         }
         if($str == "sign_up"){
             $rules = [

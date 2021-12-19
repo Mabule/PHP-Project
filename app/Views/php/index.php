@@ -11,6 +11,10 @@
 
 <body>
 	<section class="presentation">
+        <form method="post" enctype="multipart/form-data" action="Upload">
+            <input type="file" name="userfile" accept=".jpg, .jpeg, .png">
+            <input type="submit" value="Envoyer">
+        </form>
 		<div class="pannel">
             <?php
             $nb_row = 0;

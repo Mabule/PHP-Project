@@ -13,34 +13,15 @@
 	<section class="presentation">
 		<div class="pannel">
             <?php
-                $nb_row = ceil(count($_SESSION['annonce'])/3);
-                var_dump($nb_row);
+            $nb_row = 0;
+            if($_SESSION['annonce'] != 0){
+                $nb_row = count($_SESSION['annonce']);
+            }
+            (new \App\Controllers\Create_Row($nb_row))->getHTML();
             ?>
-			<div class="grid_row">
-				<div class="advertise grid_one">
-					test1
-				</div>
-				<div class="advertise grid_two grid_separator">
-					test2
-				</div>
-				<div class="advertise grid_three">
-					test3
-				</div>
-			</div>
-			<div class="grid_row">
-				<div class="advertise grid_one">
-					test4
-				</div>
-				<div class="advertise grid_two grid_separator">
-					test5
-				</div>
-				<div class="advertise grid_three">
-					test6
-				</div>
-			</div>
 		</div>
 	</section>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-	<script src="../../../public/js/app.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>

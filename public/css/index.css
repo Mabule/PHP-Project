@@ -5,3 +5,7 @@
 .advertise{
     border: 1px solid green;
 }
+
+.advertise:hover{
+    cursor: pointer;
+}

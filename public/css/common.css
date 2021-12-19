@@ -28,6 +28,10 @@ a:hover, button:hover{
 	display: flex;
 }
 
+.block{
+	display: block;
+}
+
 .column{
 	display: flex;
 	flex-direction: column;
@@ -40,6 +44,7 @@ a:hover, button:hover{
 .column_center{
 	align-items: center;
 }
+
 .grid_row{
 	width: 100%;
 	display: grid;
@@ -110,4 +115,18 @@ header nav ul li a{
 
 header nav ul li{
 	margin: 0 20px;
+}
+
+.max-box{
+	width: 75%;
+}
+
+.center-img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.txt{
+	padding: 0 10px;
 }

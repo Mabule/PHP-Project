@@ -9,16 +9,35 @@
 	<title>Coucou</title>
 </head>
 <body>
-	<div id="div">
-		<nav>
-			<ul>
-				<li>
-					<a href="">Créer une annonce</a>
-					<a href="C_personnal_change">Modifier son profil</a>
-                    <a href="">Modifier une annonce</a>
-				</li>
-			</ul>
-		</nav>
+
+	<div id = "imgDroite" class="img">
+	</div>
+
+	<div id = "imgGauche" class="img">
+	</div>
+
+	<div id="Texte">
+
+		<div id="Profil">
+			<h2>Profil</h2>
+			<br><br><br>
+			Modifier son profil
+		</div>
+
+		<div id="Annonce">
+			<h2>Les annonces</h2>
+			<br><br><br>
+			Créer une annonce
+			<br><br>
+			Modifier les annonces
+			<br><br>
+			Vos favoris
+		</div>
+
+		<div id="Messages">
+			<h2>Vos messages</h2>
+		</div>
+		
 	</div>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
   	<script src="js/app.js"></script>

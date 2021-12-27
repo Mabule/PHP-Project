@@ -1,0 +1,49 @@
+.img {
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color:rgb(214, 210, 210);
+}
+
+#imgGauche {
+    background-image: url("../img/eiffelGauche.png");
+    position: fixed;
+    left: 0%;
+    width: 10%;
+    height: 100%;
+}
+
+#imgDroite {
+    background-image: url("../img/eiffelDroite.png");
+    position: fixed;
+    left: 90%;
+    width: 10%;
+    height: 100%;
+}
+
+#Texte {
+    width: 60%;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: 20%;
+    border: 1px solid black;
+}
+
+#Profil {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#Annonce {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+#Messages {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 10%;
+}

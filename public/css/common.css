@@ -90,23 +90,21 @@ button, input{
 	border-radius: 10px;
 }
 header{
+	background-image: url("../img/TestLogo.png");
 	background-color: rgb(236, 0, 0);
 	height: 100px;
-}
-header img{
-	width: 100px;
 }
 
 header nav{
 	width: 70%;
 	height: auto;
-	background-color: green;
+	background-color: rgb(4, 9, 53);
 }
 
 ul{
 	width: 100%;
 	height: 50px;
-	background-color: yellow;
+	background-color: rgb(4, 9, 53);
 }
 
 header nav ul li a{

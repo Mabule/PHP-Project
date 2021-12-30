@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `pictures` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `house` (
-    `h_type` varchar(2) NOT NULL,
+    `h_type` varchar(2) NOT NULL primary key ,
     `h_ref_advertise` int unsigned not null,
     `h_descri` varchar(248) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -67,10 +67,11 @@ ALTER TABLE chat
     ADD FOREIGN KEY fk_c_id_users (`c_ref_users`) REFERENCES users(`u_id`),
     ADD FOREIGN KEY fk_c_id_advertise (`c_ref_advertise`) REFERENCES advertise(`d_id`);
 
-insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre', 780, 320, 'Chaud', 34, 'Une très longue description de la maison', 'Quelque part', 'Paris', '75000');
-insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre', 780, 320, 'Chaud', 34, 'Une très longue description de la maison', 'Quelque part', 'Paris', '75000');
-insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre', 780, 320, 'Chaud', 34, 'Une très longue description de la maison', 'Quelque part', 'Paris', '75000');
-insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre', 780, 320, 'Chaud', 34, 'Une très longue description de la maison', 'Quelque part', 'Paris', '75000');
+insert into `users`(`u_email`, `u_mdp`, `u_pseudo`, `u_nom`, `u_prenom`) values('email@gmail.com', 'aaaaa', 'pseudo', 'nom', 'prenom');
+insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre 1', 100, 50, 'gaz', 30, 'Une très longue description de la maison', 'Ici', 'Paris', '75000');
+insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre 2', 200, 150, 'élec', 32, 'Une très longue description de la maison', 'Là-bas', 'Nîmes', '30000');
+insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre 3', 300, 250, 'charb', 34, 'Une très longue description de la maison', 'Très loin', 'Arles', '13000');
+insert into `advertise`(`d_ref_users`, `d_title`, `d_price_rent`, `d_price_taxe`, `d_type_heating`, `d_size`, `d_description`, `d_adresse`, `d_city`, `d_CP`) values(1, 'Un titre 4', 400, 350, 'eau', 36, 'Une très longue description de la maison', 'Vraiment très très loin', 'Tokyo', '00000');
 insert into `house`(`h_type`, `h_ref_advertise`, `h_descri`) values('T1', 1, 'petit');
 insert into `house`(`h_type`, `h_ref_advertise`, `h_descri`) values('T2', 2, 'moyen');
 insert into `house`(`h_type`, `h_ref_advertise`, `h_descri`) values('T3', 3, 'grand');

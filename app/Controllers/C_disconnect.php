@@ -9,6 +9,6 @@ class C_disconnect extends BaseController
         $this->start();
         unset($_SESSION['connect']);
         session_destroy();
-        echo view('c_sign_up');
+        (new C_sign_in())->index();
     }
 }

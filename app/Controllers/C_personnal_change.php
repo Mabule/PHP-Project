@@ -8,7 +8,7 @@ class C_personnal_change extends BaseController
     {
         $this->start();
         if(!isset($_SESSION['connect'])){
-            echo view('c_sign_up');
+            (new C_sign_in())->index();
         }else{
             echo view('c_personnal_change');
         }

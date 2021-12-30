@@ -7,9 +7,6 @@ class Home extends BaseController
     public function index()
     {
         $this->start();
-        if(!isset($_SESSION['connect'])){
-            (new C_sign_up())->index();
-        }else{
             $db = db_connect();
             $builder = $db->table('advertise');
             $res_adv = $builder->get();
@@ -28,10 +25,11 @@ class Home extends BaseController
                     $builder->where('p_ref_advertise', $s['d_id']);
                     $res_img = $builder->get();
                     $info['exist_image'] = False;
-                    $info['image'] = "img\\no image.jpg";
+                    $info['image'] = "img/no image.jpg";
                     if(count($res_img->getResultArray()) != 0){
                         $info['exist_image'] = True;
-                        $info['image'] = $res_img->getResultArray()['p_name'];
+                        $info['image'] = "img/".$res_img->getResultArray()[0]['p_ref_advertise']."/".$res_img->getResultArray()[0]['p_name'];
+                        $info['alt-image'] = $res_img->getResultArray()[0]['p_title'];
                     }
                     $_SESSION['annonce'][$stage][$nb] = $info;
                     $cnt += 1;
@@ -48,5 +46,5 @@ class Home extends BaseController
             }
             echo view('c_index');
         }
-    }
+
 }

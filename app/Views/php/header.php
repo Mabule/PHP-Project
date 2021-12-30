@@ -11,7 +11,7 @@ $html = "<header class=\"row flex_center\">
                         <a href=\"C_advertise\">Toutes les annonces</a>
                     </li>
                     <li>
-                        <a href=\"";
+                        <a href=\"\"";
 if(!isset($_SESSION['connect'])){
     $html .= "C_sign_up\">Se connecter</a>
             </li>";
@@ -22,8 +22,7 @@ if(!isset($_SESSION['connect'])){
                 <a href=\"C_disconnect\">Se déconnecter</a>
             </li>";
 }
-$html .= "</ul>
-    </nav>
+$html .= "</nav>
 </header>";
 echo $html;
 ?>

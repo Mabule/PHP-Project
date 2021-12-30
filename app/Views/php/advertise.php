@@ -9,6 +9,9 @@
 	<title>Coucou</title>
 </head>
 <body>
+<div id="onload">
+    <img src="https://www.gif-maniac.com/gifs/51/50660.gif" alt="Chargement de la page" class="center-img">
+</div>
 <section class="presentation">
 		<div class="pannel">
 			<div class="grid_row">
@@ -69,6 +72,6 @@
 		</div>
 	</section>
 	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-  	<script src="js/app.js"></script>
+  	<script src="js/common.js"></script>
 </body>
 </html>

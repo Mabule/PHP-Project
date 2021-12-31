@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <?php
-$html = "<header class=\"row flex_center\">
+$html = "<header class=\"row\">
             <img src=\"img/Testlogo.png\">
             <nav class=\"row column_center\">
                 <ul class=\"row column_center\">
@@ -11,7 +11,7 @@ $html = "<header class=\"row flex_center\">
                         <a href=\"C_advertise\">Toutes les annonces</a>
                     </li>
                     <li>
-                        <a href=\"\"";
+                        <a href=\"";
 if(!isset($_SESSION['connect'])){
     $html .= "C_sign_up\">Se connecter</a>
             </li>";

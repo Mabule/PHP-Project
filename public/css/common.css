@@ -35,7 +35,7 @@ li{
 	list-style-type: none;
 }
 
-a:hover, button:hover{
+a:hover, button:hover, input[type=submit]:hover{
 	cursor: pointer;
 }
 
@@ -116,14 +116,20 @@ button, input{
 	padding: 30px;
 	border-radius: 10px;
 }
+
 header{
-	background-image: url("../img/TestLogo.png");
-	background-color: rgb(236, 0, 0);
+	height: 100px;
+}
+
+header img{
+	width: 10%;
 	height: 100px;
 }
 
 header nav{
 	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto;
 	background-color: rgb(4, 9, 53);
 }
@@ -150,7 +156,7 @@ header nav ul li{
 .center-img{
 	display: block;
 	margin-left: auto;
-	margin-right: auto
+	margin-right: auto;
 }
 
 .txt{
@@ -197,7 +203,7 @@ header nav ul li{
 	margin-top: 10px;
 }
 .margin-t-20{
-	margin-right: 10px;
+	margin-top: 10px;
 }
 .margin-t-30{
 	margin-top: 10px;
@@ -206,16 +212,16 @@ header nav ul li{
 	margin-top: 10px;
 }
 .margin-b-10{
-	margin-right: 10px;
+	margin-bottom: 10px;
 }
 .margin-b-20{
-	margin-right: 20px;
+	margin-bottom: 20px;
 }
 .margin-b-30{
-	margin-right: 30px;
+	margin-bottom: 30px;
 }
 .margin-b-40{
-	margin-right: 40px;
+	margin-bottom: 40px;
 }
 
 .font-maj{
@@ -239,4 +245,12 @@ header nav ul li{
 .fondu{
 	opacity: 0;
 	transition: opacity 0.4s ease-out;
+}
+
+.c_white{
+	color: white;
+}
+
+.txt-center{
+	text-align: center;
 }

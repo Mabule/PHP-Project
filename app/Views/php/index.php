@@ -17,11 +17,18 @@
         </form>
 		<div class="pannel">
             <?php
-            $nb_row = 0;
+            $timezones =  DateTimeZone::listIdentifiers(DateTimeZone::ALL);
+
+            foreach ($timezones as $timezone)
+            {
+                echo $timezone;
+                echo "</br>";
+            }
+            /*$nb_row = 0;
             if($_SESSION['annonce'] != 0){
                 $nb_row = count($_SESSION['annonce']);
             }
-            (new \App\Controllers\Create_Row($nb_row))->getHTML();
+            (new \App\Controllers\Create_Row($nb_row))->getHTML();*/
             ?>
 		</div>
 	</section>

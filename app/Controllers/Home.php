@@ -10,9 +10,9 @@ class Home extends BaseController
             $db = db_connect();
             $builder = $db->table('advertise');
             $res_adv = $builder->get();
-            $_SESSION['annonce'] = 0;
+            $nb_annonce = 0;
             if(count($res_adv->getResultArray()) != 0){
-                $_SESSION['annonce'] = [];
+                $annonce = [];
                 $cnt = 0;
                 $stage = 0;
                 $nb = 0;
@@ -31,7 +31,7 @@ class Home extends BaseController
                         $info['image'] = "img/".$res_img->getResultArray()[0]['p_ref_advertise']."/".$res_img->getResultArray()[0]['p_name'];
                         $info['alt-image'] = $res_img->getResultArray()[0]['p_title'];
                     }
-                    $_SESSION['annonce'][$stage][$nb] = $info;
+                    $annonce[$stage][$nb] = $info;
                     $cnt += 1;
                     $nb += 1;
                     if($cnt % 3 == 0){
@@ -44,7 +44,7 @@ class Home extends BaseController
                 }
                 $cnt = $cnt % 15;
             }
-            echo view('c_index');
+            echo view('c_index', ["nb_annonce" => $nb_annonce, "annonce" => $annonce]);
         }
 
 }

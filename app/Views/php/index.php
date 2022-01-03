@@ -15,20 +15,13 @@
             <input type="file" name="userfile" accept=".jpg, .jpeg, .png">
             <input type="submit" value="Envoyer">
         </form>
-		<div class="pannel">
+		<div class="pannel">  
             <?php
-            $timezones =  DateTimeZone::listIdentifiers(DateTimeZone::ALL);
-
-            foreach ($timezones as $timezone)
-            {
-                echo $timezone;
-                echo "</br>";
+            $nb_row = 0;
+            if($annonce != 0){
+                $nb_row = count($annonce);
             }
-            /*$nb_row = 0;
-            if($_SESSION['annonce'] != 0){
-                $nb_row = count($_SESSION['annonce']);
-            }
-            (new \App\Controllers\Create_Row($nb_row))->getHTML();*/
+            (new \App\Controllers\Create_Row($nb_row))->getHTML();
             ?>
 		</div>
 	</section>

@@ -38,12 +38,7 @@ class C_sign_in extends BaseController
                 $builder->where('u_mdp', $tab['u_mdp']);
                 $query = $builder->get();
                 if(count($query->getResultArray()) == 1) {
-                    //////////////////////////////////
-                    $_SESSION['connect'] = True;
-                    //Variable de connexion à True
-                    $_SESSION['who'] = $tab['u_pseudo'];
-                    return redirect()->to(base_url()."/PHP-Project/public/");
-                    //////////////////////////////////
+                    return redirect()->to(base_url()."/PHP-Project/public/index/true");
                 }else{
                     $builder = $db->table('users');
                     $builder->where('u_pseudo', $tab['u_pseudo']);

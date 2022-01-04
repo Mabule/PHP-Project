@@ -17,11 +17,11 @@
         </form>
 		<div class="pannel">  
             <?php
-            $nb_row = 0;
-            if($annonce != 0){
-                $nb_row = count($annonce);
+            if(isset($html)){
+                echo $html;
+            }else{
+                echo "<p>Une erreur a été rencontrée... Veuillez recharger la page ou revenir plus tard sur le site web</p>>";
             }
-            (new \App\Controllers\Create_Row($nb_row))->getHTML();
             ?>
 		</div>
 	</section>

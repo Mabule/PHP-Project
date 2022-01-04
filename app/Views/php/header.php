@@ -12,10 +12,10 @@ $html = "<header class=\"row\">
                     </li>
                     <li>
                         <a href=\"";
-if(!isset($_SESSION['connect'])){
-    $html .= "C_sign_up\">Se connecter</a>
+if(!isset($connect)){
+    $html .= "C_sign_in\">Se connecter</a>
             </li>";
-}else{
+}else if($connect == true){
     $html .= "C_personnal_space\">Mon espace</a>
             </li>
             <li>

@@ -65,13 +65,13 @@
 	                    'u_admin' => 0
 	                ];
 	                $builder->where('u_email', $tab['u_email']);
+                    $builder->where('u_pseudo', $tab['u_pseudo']);
+                    $query = $builder->get();
 	                if(count($query->getResultArray()) == 0){
 	                    $builder->insert($tab);
-	                    //$_SESSION['connect'] = True;
-	                    //$_SESSION['who'] = $tab['u_pseudo'];
-	                    return redirect()->to(base_url()."/PHP-Project/public/");
+                        return redirect()->to(base_url()."/PHP-Project/public/index/true");
 	                }else{
-	                    $var["prblm"] = "Un compte avec cet email existe déjà !";
+	                    $var["prblm"] = "Un compte avec ce pseudo ou avec cet email existe déjà !";
 	                    echo view('c_sign_up', $var);
 	                }
 				} else {

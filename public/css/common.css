@@ -47,6 +47,10 @@ a:hover, button:hover, input[type=submit]:hover{
 	display: block;
 }
 
+.hidden{
+	display: none;
+}
+
 .d-block, .d-md-block{
 	display: block;
 }

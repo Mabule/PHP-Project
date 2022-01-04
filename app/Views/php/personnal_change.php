@@ -27,6 +27,15 @@
                 <div class="ancre_droite" id="info_connexion_droite">
                     Ici les infos de connexions
                     <?php
+                        if(isset($login)){
+                        echo $login;
+                        }
+
+                        if(isset($mdp)){
+                            for ($i=0; $i < sizeof($mdp); $i++) { 
+                                echo '*';
+                            }
+                          }
                     //<input type="text" placeholder="" required name="">
                     ?>
                 </div>
@@ -39,6 +48,13 @@
                 <div class="ancre_droite" id="info_public_droite">
                     Ici les infos publiques
                     <?php
+                        if(isset($nom)){
+                            echo $nom;
+                          }
+
+                        if(isset($prénom)){
+                        echo $prénom;
+                        }
                     //<input type="text" placeholder="" required name="">
                     ?>
                 </div>
@@ -51,6 +67,13 @@
                 <div class="ancre_droite" id="info_perso_droite">
                     Ici les infos perso
                     <?php
+                        if(isset($email)){
+                            echo $email;
+                            }
+
+                        if(isset($naissance)){
+                            echo $naissance;
+                            }
                     //<input type="text" placeholder="" required name="">
                     ?>
                 </div>

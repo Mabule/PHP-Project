@@ -17,8 +17,8 @@
         </form>
 		<div class="pannel">  
             <?php
-            if(isset($html)){
-                echo $html;
+            if(isset($htm)){
+                echo $htm;
             }else{
                 echo "<p>Une erreur a été rencontrée... Veuillez recharger la page ou revenir plus tard sur le site web</p>>";
             }

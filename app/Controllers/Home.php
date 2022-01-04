@@ -47,10 +47,11 @@ class Home extends BaseController
            $annonce = [];
            $nb_annonce = 0;
         }
-        echo view('c_index', ["html" => $this->getHTML($nb_annonce, $annonce), "connect" => $co]);
+        echo view('c_index', ["htm" => $this->getHTML($nb_annonce, $annonce), "connect" => $co]);
     }
 
-    public function getHTML($nb_row, $annonce){
+    public function getHTML($nb_row, $annonce): string
+    {
         $html = "";
         if($nb_row != 0){
             for($i = 0; $i < $nb_row; $i++){

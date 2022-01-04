@@ -8,6 +8,7 @@
 }
 
 body{
+	background-color: #000;
 	min-height: 100vh;
 	overflow-x: hidden;
 }
@@ -257,4 +258,8 @@ header nav ul li{
 
 .txt-center{
 	text-align: center;
+}
+
+#blanc {
+	color: white;
 }

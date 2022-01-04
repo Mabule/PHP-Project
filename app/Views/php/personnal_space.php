@@ -21,7 +21,7 @@
 		<div id="Profil">
 			<h2>Profil</h2>
 			<br><br><br>
-			Modifier son profil
+			<a href="C_personnal_change" >Modifier son profil</a> 
 		</div>
 
 		<div id="Annonce">

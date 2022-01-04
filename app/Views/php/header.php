@@ -3,7 +3,7 @@
 $html = "<header class=\"row\">
             <img src=\"img/Testlogo.png\">
             <nav class=\"row column_center\">
-                <ul class=\"row column_center\">
+                <ul class=\"row column_center\" id=\"blanc\">
                     <li>
                         <a href=\"Home\">Accueil</a>
                     </li>

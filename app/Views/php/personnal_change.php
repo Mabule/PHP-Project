@@ -9,6 +9,7 @@
     </head>
 
     <body>
+
         <div id="Choice">
             <ul>
                 <li><a href="#connexion" class="lien">Informations de connexion</a></li>
@@ -25,6 +26,9 @@
                 </div>
                 <div class="ancre_droite" id="info_connexion_droite">
                     Ici les infos de connexions
+                    <?php
+                    //<input type="text" placeholder="" required name="">
+                    ?>
                 </div>
             </div>
 
@@ -34,6 +38,9 @@
                 </div>
                 <div class="ancre_droite" id="info_public_droite">
                     Ici les infos publiques
+                    <?php
+                    //<input type="text" placeholder="" required name="">
+                    ?>
                 </div>
             </div>
 
@@ -43,6 +50,9 @@
                 </div>
                 <div class="ancre_droite" id="info_perso_droite">
                     Ici les infos perso
+                    <?php
+                    //<input type="text" placeholder="" required name="">
+                    ?>
                 </div>
             </div>
             
@@ -52,6 +62,9 @@
                 </div>
                 <div class="ancre_droite" id="supprimer_droite">
                     ici pour supprimer le compte
+                    <?php
+                    //<input type="text" placeholder="" required name="">
+                    ?>
                 </div>
             </div>
             <footer></footer>

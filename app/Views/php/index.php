@@ -30,5 +30,7 @@
 	</section>
     <script src="/js/common.js"></script>
 	<script src="/js/annonce.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/annonce.js"></script>
 </body>
 </html>

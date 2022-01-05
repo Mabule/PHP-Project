@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="/css/common.css">
-	<link rel="stylesheet" type="text/css" href="/css/personnal_space.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/personnal_space.css">
 	<title>Modifier son profil</title>
 </head>
 <body>
@@ -20,18 +20,18 @@
 		<div id="Profil" class="row column">
 			<h2>Gestion de votre profil</h2>
             <ul class="margin-t-20">
-                <li><a href="/C_personnal_change" >Modifier son profil</a></li>
+                <li><a href="<?php echo base_url(); ?>/C_personnal_change" >Modifier son profil</a></li>
             </ul>
 		</div>
 
 		<div id="Annonce" class="row column">
 			<h2>Gestion des annonces</h2>
             <ul class="margin-t-20">
-                <li><a href="/Add_annonce">Créer une annonce</a></li>
-                <li><a href="/C_modify">Modifier les annonces</a></li>
+                <li><a href="<?php echo base_url(); ?>/Add_annonce">Créer une annonce</a></li>
+                <li><a href="<?php echo base_url(); ?>/C_modify">Modifier les annonces</a></li>
             </ul>
 		</div>
 	</div>
-    <script src="/js/common.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

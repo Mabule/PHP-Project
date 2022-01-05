@@ -16,10 +16,11 @@ body.childNodes.forEach(child => {
         });
     }
 });
+
 lst_advertise.forEach(el => {
    el.addEventListener("click", () => {
        document.cookie = "advertise="+el.dataset.id;
-       window.location.href="http://localhost:8080/C_annonce/index/"+el.dataset.id;
+       window.location.href="https://a-pedagoarles-lamp.aix.univ-amu.fr/A2122M3104G01/public/C_annonce/index/"+el.dataset.id;
    });
    console.log("setup");
 });

@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'https://a-pedagoarles-lamp.aix.univ-amu.fr/A2122M3104G01/public/';
 
     /**
      * --------------------------------------------------------------------------

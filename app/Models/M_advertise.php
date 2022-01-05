@@ -25,10 +25,10 @@ class M_advertise extends Model
                 $builder->where('p_ref_advertise', $s['d_id']);
                 $res_img = $builder->get();
                 $info['exist_image'] = False;
-                $info['image'] = "/img/no image.jpg";
+                $info['image'] = "img/no image.jpg";
                 if(count($res_img->getResultArray()) != 0){
                     $info['exist_image'] = True;
-                    $info['image'] = "/img/".$res_img->getResultArray()[0]['p_ref_advertise']."/".$res_img->getResultArray()[0]['p_name'];
+                    $info['image'] = "img/".$res_img->getResultArray()[0]['p_ref_advertise']."/".$res_img->getResultArray()[0]['p_name'];
                     $info['alt-image'] = $res_img->getResultArray()[0]['p_title'];
                 }
                 $annonce["annonce"][$stage][$nb] = $info;

@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'mysql-emmanuellion.alwaysdata.net',
-        'username' => '253937',
-        'password' => 'Avengers-2002',
-        'database' => 'emmanuellion_bdd',
+        'hostname' => 'localhost',
+        'username' => 'A2122M3104G01',
+        'password' => 'jphOHISO',
+        'database' => 'A2122M3104G01',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => true,

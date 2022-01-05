@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
 	<title>Liste des annonces</title>
 </head>
 <body>
@@ -16,6 +16,6 @@
 			<?php if(isset($htm)) echo $htm; ?>
 		</div>
 	</section>
-  	<script src="js/common.js"></script>
+  	<script src="/js/common.js"></script>
 </body>
 </html>

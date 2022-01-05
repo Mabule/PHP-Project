@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mabule">
-    <link rel="stylesheet" type="text/css" href="/css/common.css">
-    <link rel="stylesheet" type="text/css" href="/css/form.css">
-    <link rel="stylesheet" type="text/css" href="/css/add_annonce.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/add_annonce.css">
     <title>Accueil</title>
 </head>
 
@@ -119,6 +119,6 @@
     <input type="submit" value="Publier l'annonce" class="bottom_handler" name="send">
 </form>
 </main>
-<script src="/js/common.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

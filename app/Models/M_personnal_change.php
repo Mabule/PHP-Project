@@ -11,13 +11,12 @@ class M_personnal_change extends Model
         $builder = $db->table('users');
         $builder->where('u_id', $id);
         $query = $builder->get();
-        $var = [
+        return [
             "nom" => $query->getResultArray()[0]['u_nom'],
             "prenom" => $query->getResultArray()[0]['u_prenom'],
             "mdp" => $query->getResultArray()[0]['u_mdp'],
             "email" => $query->getResultArray()[0]['u_email'],
             "login" => $query->getResultArray()[0]['u_pseudo']
         ];
-        return $var;
     }
 }

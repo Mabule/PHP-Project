@@ -32,7 +32,7 @@ class C_annonce extends BaseController
                     $html .= " active";
                 }
                 $html .= "\">";
-                $html .= "<img class=\"d-block w-100\" src=\"/img/" . $p['p_ref_advertise'] . "/" . basename($p['p_name']) . "\" alt=\"" . $p['p_title'] . "\">
+                $html .= "<img class=\"d-block w-100\" src=\"img/" . $p['p_ref_advertise'] . "/" . basename($p['p_name']) . "\" alt=\"" . $p['p_title'] . "\">
                           <div class=\"carousel-caption d-none d-md-block\">
                             <h3>" . $p['p_title'] . "</h3>
                           </div>

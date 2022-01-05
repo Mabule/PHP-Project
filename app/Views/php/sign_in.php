@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mabule">
-    <link rel="stylesheet" type="text/css" href="/css/common.css">
-    <link rel="stylesheet" type="text/css" href="/css/form.css">
-    <link rel="stylesheet" type="text/css" href="/css/sign_in.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/sign_in.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -46,10 +46,10 @@
 
         <input type="submit" value="Se connecter" class="bottom_handler" name="send">
         <p class="redirect margin-t-20">
-            Vous n'avez pas encore de compte ? Alors n'hésitez pas à <u><a href="/C_sign_up">vous inscrire maintenant !</a></u>
+            Vous n'avez pas encore de compte ? Alors n'hésitez pas à <u><a href="<?php echo base_url(); ?>/C_sign_up">vous inscrire maintenant !</a></u>
         </p>
     </form>
 </main>
-<script src="/js/common.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

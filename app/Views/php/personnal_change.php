@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="author" content="Léo">
-        <link rel="stylesheet" type="text/css" href="/css/personnal_change.css">
+        <link rel="stylesheet" type="text/css" href="css/personnal_change.css">
 	    <title>Profil de <?php $log = $login ?? "personne"; echo $log ?></title>
     </head>
 
@@ -71,13 +71,13 @@
                 </div>
                 <div class="ancre_droite" id="supprimer_droite">
                     <u>
-                        <a href="/C_Destroy">
+                        <a href="<?php echo base_url(); ?>/C_Destroy">
                             Supprimer (attention une fois cliqué sur le bouton, l'action est irréverssible)
                         </a>
                     </u>
                 </div>
             </div>
         </div>
-    <script src="/js/common.js"></script>
+    <script src="js/common.js"></script>
     </body>
 </html>

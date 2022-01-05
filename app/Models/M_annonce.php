@@ -30,7 +30,7 @@ class M_annonce extends Model
         $builder = $db->table('pictures');
         $builder->where('p_ref_advertise', $_COOKIE['advertise']);
         $res_img = $builder->get();
-        $annonce['advertise']['pictures']['p_name'] = "/img\\no image.jpg";
+        $annonce['advertise']['pictures']['p_name'] = "img\\no image.jpg";
         if(count($res_img->getResultArray()) != 0){
             $annonce['advertise']['pictures'] = $res_img->getResultArray();
         }

@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="/css/common.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
 	<title>Accueil</title>
 </head>
@@ -28,8 +27,6 @@
             ?>
 		</div>
 	</section>
-    <script src="/js/common.js"></script>
-	<script src="/js/annonce.js"></script>
     <script src="js/common.js"></script>
     <script src="js/annonce.js"></script>
 </body>

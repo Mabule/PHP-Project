@@ -39,9 +39,15 @@ class Add_annonce extends BaseController
                     ]
                 ],
                 'type_heating' => [
-                    'rules' => 'required|max_length[10]',
+                    'rules' => 'required|max_length[9]|max_length[10]',
                     'errors' => [
                         'required' => 'Veuillez fournir un type de chauffage valide',
+                    ]
+                ],
+                'house' => [
+                    'rules' => 'required|min_length[2]|max_length[2]',
+                    'errors' => [
+                        'required' => 'Veuillez fournir un type d\'habitation valide',
                     ]
                 ],
                 'size' => [
@@ -79,7 +85,7 @@ class Add_annonce extends BaseController
                 $db = db_connect();
                 $builder = $db->table('advertise');
                 $tab = [
-                    'd_ref_users' => "",
+                    'd_ref_users' => $_SESSION["id"],
                     'd_title' => $_POST['title'],
                     'd_price_rent' => $_POST['price_rent'],
                     'd_price_taxe' => $_POST['price_taxe'],
@@ -90,14 +96,9 @@ class Add_annonce extends BaseController
                     'd_city' => $_POST['city'],
                     'd_CP' => $_POST['CP']
                 ];
-                $l = ["individuel", "collectif", "aucun"];
-                if(in_array($tab["d_type_heating"], $l)){
-                    $builder->insert($tab);
-                    $var["succes"] = "L'annonce a bien été enregistré";
-                }else{
-                    $var["type_heating"] = "Type de chauffage invalde";
-                    echo view('c_add_annonce', $var);
-                }
+                $builder->insert($tab);
+                $var["succes"] = "L'annonce a bien été enregistré";
+                echo view('c_add_annonce', $var);
             } else {
                 foreach($rules as $key => $val){
                     if(isset($this->validator->getErrors()[$key])){

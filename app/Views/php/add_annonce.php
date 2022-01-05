@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mabule">
     <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <link rel="stylesheet" type="text/css" href="/css/add_annonce.css">
     <title>Accueil</title>
 </head>
 
@@ -12,8 +14,15 @@
 <div id="onload">
     <img src="https://www.gif-maniac.com/gifs/51/50660.gif" alt="Chargement de la page" class="center-img">
 </div>
+<main class="margin-t-40">
 <form action="Add_annonce" method="POST" class="column column_center flex_center">
-    <h1 class="txt-center margin-b-20">Inscription</h1>
+    <h1 class="txt-center margin-b-20">Publier une annonce</h1>
+    <p class="succes">
+        <?php
+        if(isset($succes) && $succes != "")
+            echo $succes;
+        ?>
+    </p>
     <p class="error">
         <?php
         if(isset($prblm) && $prblm != "")
@@ -36,7 +45,7 @@
         ?>
     </p>
     <label>Montant du loyer</label>
-    <input type="number" placeholder="690" required name="preice_rent" class="margin-b-20">
+    <input type="number" placeholder="690" required name="price_rent" class="margin-b-20">
     <p class="error">
         <?php
         if(isset($price_rent) && $price_rent != "")
@@ -51,6 +60,7 @@
             echo $price_taxe;
         ?>
     </p>
+    <label>Type de chauffage</label>
     <select required name="type_heating" class="margin-b-20">
         <option>Collectif</option>
         <option>Individuel</option>
@@ -67,6 +77,21 @@
         <?php
         if(isset($size) && $size != "")
             echo $size;
+        ?>
+    </p>
+    <label>Type d'habitation'</label>
+    <select required name="house" class="margin-b-20">
+        <option>T1</option>
+        <option>T2</option>
+        <option>T3</option>
+        <option>T4</option>
+        <option>T5</option>
+        <option>T6</option>
+    </select>
+    <p class="error">
+        <?php
+        if(isset($house) && $house != "")
+            echo $house;
         ?>
     </p>
     <input type="text" placeholder="Adresse" required name="adresse" class="margin-b-20">
@@ -93,6 +118,7 @@
     </p>
     <input type="submit" value="Publier l'annonce" class="bottom_handler" name="send">
 </form>
+</main>
 <script src="/js/common.js"></script>
 </body>
 </html>

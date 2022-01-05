@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mabule">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link rel="stylesheet" type="text/css" href="css/sign_up.css">
-    <title>Coucou</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <link rel="stylesheet" type="text/css" href="/css/sign_up.css">
+    <title>Connexion</title>
 </head>
 <body>
 <div id="onload">
@@ -72,12 +72,12 @@
                     echo $mdp_confirm;
                 ?>
             </p>
-        <input type="submit" value="S'inscrire'" class="bottom_handler" name="send">
+        <input type="submit" value="S'inscrire" class="bottom_handler" name="send">
         <p class="redirect margin-t-20">
-            Vous avez déjà un compte ? Alors <u><a href="C_sign_in">connectez-vous maintenant !</a></u>
+            Vous avez déjà un compte ? Alors <u><a href="/C_sign_in">connectez-vous maintenant !</a></u>
         </p>
     </form>
 <script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-<script src="js/common.js"></script>
+<script src="/js/common.js"></script>
 </body>
 </html>

@@ -110,19 +110,23 @@ button, input{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid red;
+	background: rgb(25,26,72);
+	background: linear-gradient(180deg, rgba(25,26,72,1) 0%, rgba(82,1,133,1) 100%);
 }
 
 .pannel{
 	width: 75%;
 	margin: auto;
-	background-color: #ddd;
+	background-color: transparent;
 	padding: 30px;
 	border-radius: 10px;
 }
 
 header{
 	height: 100px;
+	background-color: #191A48;
+	border-bottom: 1px solid #111230;
+	font-weight: bolder;
 }
 
 header img{
@@ -135,21 +139,35 @@ header nav{
 	margin-left: auto;
 	margin-right: auto;
 	height: auto;
-	background-color: rgb(4, 9, 53);
 }
 
 header nav ul{
 	width: 100%;
 	height: 50px;
-	background-color: rgb(4, 9, 53);
 }
 
 header nav ul li a{
 	font-size: 150%;
+	color: white;
 }
 
 header nav ul li{
 	margin: 0 20px;
+	position: relative;
+}
+
+header nav ul li:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	transform: translateY(33px);
+	transition: transform 0.5s;
+}
+
+header nav ul li:hover:before{
+	transform: translateY(38px);
 }
 
 .box-advertise{
@@ -261,4 +279,20 @@ header nav ul li{
 
 #blanc {
 	color: white;
+}
+
+/*==========*/
+
+.advertise{
+	border: none;
+	border-radius: 10px;
+	color: white;
+	filter: brightness(60%);
+	transition: filter 0.5s, border 0.5s;
+}
+
+.advertise:hover{
+	cursor: pointer;
+	filter: brightness(100%);
+	border: 1px solid white;
 }

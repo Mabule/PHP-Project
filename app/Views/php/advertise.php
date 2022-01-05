@@ -4,9 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/advertise.css">
-	<title>Coucou</title>
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<title>Liste des annonces</title>
 </head>
 <body>
 <div id="onload">
@@ -71,7 +70,6 @@
 			</div>
 		</div>
 	</section>
-	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-  	<script src="js/common.js"></script>
+  	<script src="/js/common.js"></script>
 </body>
 </html>

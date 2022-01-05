@@ -2,46 +2,23 @@
 
 namespace App\Controllers;
 
+use App\Models\M_annonce;
+
 class C_annonce extends BaseController
 {
-    public function index()
+    public function index($id = 0)
     {
         $this->start();
-            $db = db_connect();
-            $builder = $db->table('advertise');
-            $builder->where('d_id', $_COOKIE['advertise']);
-            $query = $builder->get();
-            if(count($query->getResultArray()) != 0){
-                $adv = $query->getResultArray()[0];
-                $annonce['advertise'] = [];
-                $annonce['advertise']['advertise'] = $adv;
-                //
-                $builder = $db->table('pictures');
-                $builder->where('p_ref_advertise', $_COOKIE['advertise']);
-                $res_img = $builder->get();
-                $annonce['advertise']['pictures']['p_name'] = "img\\no image.jpg";
-                if(count($res_img->getResultArray()) != 0){
-                    $annonce['advertise']['pictures'] = $res_img->getResultArray();
-                }
-                //
-                $builder = $db->table('energy');
-                $builder->where('e_ref_advertise', $_COOKIE['advertise']);
-                $res_ene = $builder->get();
-                if(count($res_ene->getResultArray()) != 0){
-                    $annonce['advertise']['energy'] = $res_ene->getResultArray()[0];
-                }
-                //
-                $builder = $db->table('house');
-                $builder->where('h_ref_advertise', $_COOKIE['advertise']);
-                $res_hou = $builder->get();
-                if(count($res_hou->getResultArray()) != 0){
-                    $annonce['advertise']['house'] = $res_hou->getResultArray()[0];
-                }
-                echo view('c_annonce', ["carrousel" => $this->getCarrousel($annonce), "annonce" => $annonce]);
+        if($id != 0){
+            $data = (new M_annonce())->load_data($id);
+            if($data !== null){
+                echo view('c_annonce', ["carrousel" => $this->getCarrousel($data), "annonce" => $data]);
             }else{
-                return redirect()->to(base_url()."/PHP-Project/public/index/true");
+                return redirect()->to(base_url()."/Home");
             }
-
+        }else{
+            return redirect()->to(base_url()."/Home");
+        }
     }
 
     public function getCarrousel($annonce){
@@ -55,7 +32,7 @@ class C_annonce extends BaseController
                     $html .= " active";
                 }
                 $html .= "\">";
-                $html .= "<img class=\"d-block w-100\" src=\"img/" . $p['p_ref_advertise'] . "/" . basename($p['p_name']) . "\" alt=\"" . $p['p_title'] . "\">
+                $html .= "<img class=\"d-block w-100\" src=\"/img/" . $p['p_ref_advertise'] . "/" . basename($p['p_name']) . "\" alt=\"" . $p['p_title'] . "\">
                           <div class=\"carousel-caption d-none d-md-block\">
                             <h3>" . $p['p_title'] . "</h3>
                           </div>

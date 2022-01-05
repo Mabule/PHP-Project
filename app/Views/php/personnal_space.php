@@ -4,16 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Mabule">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/personnal_space.css">
-	<title>Coucou</title>
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/personnal_space.css">
+	<title>Modifier son profil</title>
 </head>
 <body>
 
-	<div id = "imgDroite" class="img">
+	<div id = "imgDroite" class="img" alt="Bannière de droite">
 	</div>
 
-	<div id = "imgGauche" class="img">
+	<div id = "imgGauche" class="img" alt="Bannière de gauche">
 	</div>
 
 	<div id="Texte">
@@ -21,13 +21,13 @@
 		<div id="Profil">
 			<h2>Profil</h2>
 			<br><br><br>
-			<a href="C_personnal_change" >Modifier son profil</a> 
+			<a href="/C_personnal_change" >Modifier son profil</a>
 		</div>
 
 		<div id="Annonce">
 			<h2>Les annonces</h2>
 			<br><br><br>
-			Créer une annonce
+            <a href="/Add_annonce">Créer une annonce</a>
 			<br><br>
 			Modifier les annonces
 			<br><br>
@@ -39,7 +39,5 @@
 		</div>
 		
 	</div>
-	<script src="https://kit.fontawesome.com/7f62026b48.js" crossorigin="anonymous"></script>
-  	<script src="js/app.js"></script>
 </body>
 </html>

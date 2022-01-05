@@ -38,12 +38,11 @@ class C_sign_in extends BaseController
                 $builder->where('u_mdp', $tab['u_mdp']);
                 $query = $builder->get();
                 if(count($query->getResultArray()) == 1) {
-                    return redirect()->to(base_url()."/PHP-Project/public/index/true");
+                    $id = $query->getResultArray()[0]['u_id'];
+                    $_SESSION["id"] = $id;
+                    return redirect()->to(base_url()."/Home");
                 }else{
-                    $builder = $db->table('users');
-                    $builder->where('u_pseudo', $tab['u_pseudo']);
-                    $query = $builder->get();
-                    $var["prblm"] = "Mauvais pseudo et mauvais mot de passe";
+                    $var["prblm"] = "Mauvais pseudo et/ou mauvais mot de passe";
                     if(count($query->getResultArray()) == 1){
                         $var["prblm"] = "Mauvais mot de passe";
                     }

@@ -93,7 +93,7 @@ class Add_annonce extends BaseController
                 $l = ["individuel", "collectif", "aucun"];
                 if(in_array($tab["d_type_heating"], $l)){
                     $builder->insert($tab);
-                    $var["succes"] = "L'annonce a bien été enregistré"
+                    $var["succes"] = "L'annonce a bien été enregistré";
                 }else{
                     $var["type_heating"] = "Type de chauffage invalde";
                     echo view('c_add_annonce', $var);

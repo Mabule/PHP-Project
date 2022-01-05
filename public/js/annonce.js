@@ -19,7 +19,7 @@ body.childNodes.forEach(child => {
 lst_advertise.forEach(el => {
    el.addEventListener("click", () => {
        document.cookie = "advertise="+el.dataset.id;
-       window.location.href="http://localhost/PHP-Project/public/C_annonce";
+       window.location.href="http://localhost:8080/C_annonce/index/"+el.dataset.id;
    });
    console.log("setup");
 });

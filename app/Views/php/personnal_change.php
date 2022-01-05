@@ -4,8 +4,8 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="author" content="Léo">
-        <link rel="stylesheet" type="text/css" href="css/personnal_change.css">
-	    <title>Coucou</title>
+        <link rel="stylesheet" type="text/css" href="/css/personnal_change.css">
+	    <title>Profil de <?php $log = $login ?? "personne"; echo $login ?></title>
     </head>
 
     <body>
@@ -25,18 +25,14 @@
                     <h1>Connexion :</h1>
                 </div>
                 <div class="ancre_droite" id="info_connexion_droite">
-                    Ici les infos de connexions
+                    Ici les infos de connexions<br>
                     <?php
-                        if(isset($login)){
-                        echo $login;
-                        }
+                        echo "Pseudo :".$login."<br>";
 
-                        if(isset($mdp)){
-                            for ($i=0; $i < sizeof($mdp); $i++) { 
+                        if(isset($mdp))
+                            echo "Mot de passe :";
+                            for ($i=0; $i < strlen($mdp); $i++)
                                 echo '*';
-                            }
-                          }
-                    //<input type="text" placeholder="" required name="">
                     ?>
                 </div>
             </div>
@@ -46,35 +42,27 @@
                     <h1>Info publiques :</h1>
                 </div>
                 <div class="ancre_droite" id="info_public_droite">
-                    Ici les infos publiques
+                    Ici les infos publiques<br>
                     <?php
-                        if(isset($nom)){
-                            echo $nom;
-                          }
+                        if(isset($nom))
+                            echo "Nom :".$nom."<br>";
 
-                        if(isset($prénom)){
-                        echo $prénom;
-                        }
-                    //<input type="text" placeholder="" required name="">
+                        if(isset($prenom))
+                            echo "Prénom :".$prenom;
+
                     ?>
                 </div>
             </div>
 
             <div id="info_perso" class="groupe">
                 <div class="ancre_gauche" id="info_perso_gauche">
-                    <h1>info personnelles :</h1>
+                    <h1>informations personnelles :</h1>
                 </div>
                 <div class="ancre_droite" id="info_perso_droite">
-                    Ici les infos perso
+                    Ici les informations personnelles
                     <?php
-                        if(isset($email)){
+                        if(isset($email))
                             echo $email;
-                            }
-
-                        if(isset($naissance)){
-                            echo $naissance;
-                            }
-                    //<input type="text" placeholder="" required name="">
                     ?>
                 </div>
             </div>
@@ -85,9 +73,7 @@
                 </div>
                 <div class="ancre_droite" id="supprimer_droite">
                     ici pour supprimer le compte
-                    <?php
-                    //<input type="text" placeholder="" required name="">
-                    ?>
+                    <u><a href="/C_Destroy">Supprimer (attention une fois cliqué sur le bouton, l'action est irréverssible)</a></u>
                 </div>
             </div>
             <footer></footer>

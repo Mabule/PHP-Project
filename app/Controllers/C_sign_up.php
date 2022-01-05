@@ -17,37 +17,37 @@
 				];
 				$rules = [
 					'nom' => [
-						'rules' => 'required|min_length[2]',
+						'rules' => 'required|min_length[2]|max_length[255]',
 						'errors' => [
-							'required' => 'Veuillez renseigner un nom valide (2 caractères minimum, 255 caractères maximum)',
+							'required' => 'Veuillez fournir un nom (entre 2 et 255 caractères)',
 						]
 					],
 					'prenom' => [
-						'rules' => 'required|min_length[2]',
+						'rules' => 'required|min_length[2]|max_length[255]',
 						'errors' => [
-							'required' => 'Veuillez renseigner un prénom valide (2 caractères minimum, 255 caractères maximum)',
+							'required' => 'Veuillez fournir un prénom (entre 2 et 255 caractères)',
 						]
 					],
 					'login' => [
-						'rules' => 'required|min_length[2]',
+						'rules' => 'required|min_length[2]|max_length[255]',
 						'errors' => [
-							'required' => 'Veuillez renseigner un pseudo valide (2 caractères minimum, 255 caractères maximum)',
+							'required' => 'Veuillez renseigner un pseudo valide (entre 2 255 caractères)',
 						]
 					],
 					'email' => [
-						'rules' => 'required|valid_email',
+						'rules' => 'required|valid_email|max_length[255]',
 						'errors' => [
-							'required' => 'Veuillez renseigner un email valide (et ne pas exéder 255 caractères)',
+							'required' => 'Veuillez renseigner un email valide (et ne pas excéder 255 caractères)',
 						]
 					],
 					'mdp' => [
-						'rules' => 'required|min_length[5]',
+						'rules' => 'required|min_length[5]|max_length[255]',
 						'errors' => [
-							'required' => 'Veuillez renseigner un mot de passe valide (5 caractères minimum, 255 caractères maximum)',
+							'required' => 'Veuillez renseigner un mot de passe valide (entre 5 255 caractères)',
 						]
 					],
 					'mdp_confirm' => [
-						'rules' => 'required|min_length[5]|matches[mdp]',
+						'rules' => 'required|min_length[5]|max_length[255]|matches[mdp]',
 						'errors' => [
 							'required' => 'Les mots de passe doivent être similaire',
 						]
@@ -69,7 +69,12 @@
                     $query = $builder->get();
 	                if(count($query->getResultArray()) == 0){
 	                    $builder->insert($tab);
-                        return redirect()->to(base_url()."/PHP-Project/public/index/true");
+                        $builder = $db->table('users');
+                        $builder->where('u_email', $tab['u_email']);
+                        $query = $builder->get();
+                        $id = $query->getResultArray()[0]['u_id'];
+                        $_SESSION["id"] = $id;
+                        return redirect()->to(base_url()."/Home");
 	                }else{
 	                    $var["prblm"] = "Un compte avec ce pseudo ou avec cet email existe déjà !";
 	                    echo view('c_sign_up', $var);

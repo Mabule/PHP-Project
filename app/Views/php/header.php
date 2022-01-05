@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <?php
 $html = "<header class=\"row\">
-            <img src=\"/img/Testlogo.png\">  
+            <img src=\"img/TestLogo.png\">  
             <nav class=\"row column_center\">
                 <ul class=\"row column_center\" id=\"blanc\">
                     <li>

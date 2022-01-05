@@ -19,7 +19,7 @@ if(!isset($_SESSION["id"])){
     $html .= "/C_personnal_space\">Mon espace</a>
             </li>
             <li>
-                <a href=\"/C_sign_in\">Se déconnecter</a>
+                <a href=\"/C_disconnect\">Se déconnecter</a>
             </li>";
 }
 $html .= "</nav>

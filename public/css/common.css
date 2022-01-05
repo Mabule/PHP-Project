@@ -296,3 +296,7 @@ header nav ul li:hover:before{
 	filter: brightness(100%);
 	border: 1px solid white;
 }
+
+.underline{
+	text-decoration: underline;
+}

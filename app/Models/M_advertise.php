@@ -40,6 +40,6 @@ class M_advertise extends Model
                 }
             }
         }
-        return [ceil(count($annonce["annonce"])%3), $annonce];
+        return [count($annonce["annonce"]), $annonce];
     }
 }

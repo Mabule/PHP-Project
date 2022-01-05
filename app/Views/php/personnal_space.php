@@ -9,35 +9,29 @@
 	<title>Modifier son profil</title>
 </head>
 <body>
+<div id="onload">
+    <img src="https://www.gif-maniac.com/gifs/51/50660.gif" alt="Chargement de la page" class="center-img">
+</div>
+	<div id = "imgDroite" class="img" alt="Bannière de droite"></div>
 
-	<div id = "imgDroite" class="img" alt="Bannière de droite">
-	</div>
+	<div id = "imgGauche" class="img" alt="Bannière de gauche"></div>
 
-	<div id = "imgGauche" class="img" alt="Bannière de gauche">
-	</div>
-
-	<div id="Texte">
-
-		<div id="Profil">
-			<h2>Profil</h2>
-			<br><br><br>
-			<a href="/C_personnal_change" >Modifier son profil</a>
+	<div id="Texte" class="row column flex-between">
+		<div id="Profil" class="row column">
+			<h2>Gestion de votre profil</h2>
+            <ul class="margin-t-20">
+                <li><a href="/C_personnal_change" >Modifier son profil</a></li>
+            </ul>
 		</div>
 
-		<div id="Annonce">
-			<h2>Les annonces</h2>
-			<br><br><br>
-            <a href="/Add_annonce">Créer une annonce</a>
-			<br><br>
-			Modifier les annonces
-			<br><br>
-			Vos favoris
+		<div id="Annonce" class="row column">
+			<h2>Gestion des annonces</h2>
+            <ul class="margin-t-20">
+                <li><a href="/Add_annonce">Créer une annonce</a></li>
+                <li><a href="/C_modify">Modifier les annonces</a></li>
+            </ul>
 		</div>
-
-		<div id="Messages">
-			<h2>Vos messages</h2>
-		</div>
-		
 	</div>
+    <script src="/js/common.js"></script>
 </body>
 </html>

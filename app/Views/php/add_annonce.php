@@ -79,7 +79,7 @@
             echo $size;
         ?>
     </p>
-    <label>Type d'habitation'</label>
+    <label>Type d'habitation</label>
     <select required name="house" class="margin-b-20">
         <option>T1</option>
         <option>T2</option>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mabule">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/annonce.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/common.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/annonce.css">
     <title>
         <?php
         if(isset($annonce))
@@ -36,7 +36,7 @@
                     <i class="fa fa-expand center-img" aria-hidden="true"></i><?php echo $annonce['advertise']['advertise']['d_size'] ?>m²
                 </li>
                 <li class="column">
-                    <i class="fa fa-bed center-img" aria-hidden="true"></i><?php echo $annonce['advertise']['house']['h_type'] ?>
+                    <i class="fa fa-bed center-img" aria-hidden="true"></i><?php if(isset($annonce['advertise']['house'])) echo $annonce['advertise']['house']['h_type'] ?>
                 </li>
             </ul>
         </div>
@@ -53,15 +53,15 @@
         </ul>
     </div>
 </section>
-<script src="js/common.js" crossorigin="anonymous"></script>
-<script src="Bootstrap/js/bootstrap.bundle.js"></script>
-<script src="Bootstrap/js/bootstrap.bundle.js.map"></script>
-<script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="Bootstrap/js/bootstrap.bundle.min.js.map"></script>
-<script src="Bootstrap/js/bootstrap.js"></script>
-<script src="Bootstrap/js/bootstrap.js.map"></script>
-<script src="Bootstrap/js/bootstrap.min.js"></script>
-<script src="Bootstrap/js/bootstrap.min.js.map"></script>
+<script src="<?php echo base_url(); ?>/js/common.js" crossorigin="anonymous"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.bundle.js"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.bundle.js.map"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.bundle.min.js.map"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.js.map"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>/Bootstrap/js/bootstrap.min.js.map"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

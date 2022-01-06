@@ -25,19 +25,18 @@ class M_annonce extends Model
 
         $annonce['advertise'] = [];
         $annonce['advertise']['advertise'] = $adv;
-
         //Getting the picture of the advertise
         $builder = $db->table('pictures');
-        $builder->where('p_ref_advertise', $_COOKIE['advertise']);
+        $builder->where('p_ref_advertise', $id);
         $res_img = $builder->get();
         $annonce['advertise']['pictures']['p_name'] = "img\\no image.jpg";
         if(count($res_img->getResultArray()) != 0){
-            $annonce['advertise']['pictures'] = $res_img->getResultArray();
+            $annonce['advertise']['pictures']['p_name'] = $res_img->getResultArray()[0];
         }
 
         //Gettig the type of energy of the advertise
         $builder = $db->table('energy');
-        $builder->where('e_ref_advertise', $_COOKIE['advertise']);
+        $builder->where('e_ref_advertise', $id);
         $res_ene = $builder->get();
         if(count($res_ene->getResultArray()) != 0){
             $annonce['advertise']['energy'] = $res_ene->getResultArray()[0];
@@ -45,12 +44,12 @@ class M_annonce extends Model
 
         //Getting the type of location of the advertise
         $builder = $db->table('house');
-        $builder->where('h_ref_advertise', $_COOKIE['advertise']);
+        $builder->where('h_ref_advertise', $id);
         $res_hou = $builder->get();
         if(count($res_hou->getResultArray()) != 0){
             $annonce['advertise']['house'] = $res_hou->getResultArray()[0];
         }
-
+        //var_dump($annonce['advertise']['advertise']);
         return $annonce;
     }
 }

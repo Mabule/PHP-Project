@@ -125,7 +125,7 @@ button, input{
 
 header{
 	height: 100px;
-	background-color: #191A48;
+	/* background-color: #191A48; */
 	border-bottom: 1px solid #111230;
 	font-weight: bolder;
 }
